@@ -6,7 +6,6 @@ Created on Sun Jan 24 00:49:38 2021
 
 Topic:
 """
-
 str1 = input("enter string 1 :: ")
 str2 = input("enter string 2 :: ")
 
@@ -52,7 +51,7 @@ for i in str3:
     else:
         wrd += i
 
-print(initials1)
+print("full initials :",initials1)
 
 wrd = ""
 initials2 = ""
@@ -64,12 +63,29 @@ for i in str1:
         wrd += i
 
 initials2 += wrd
-print(initials2)
+print("initials with last name:: ",initials2)
 
 consless = ""
 for i in range(len(str1)-1):
     if(str1[i] != str1[i+1]):
         consless += str1[i]
 consless += str1[len(str1)-1]
-print(consless)
+print("after deletion of consiquitive strings:: ",consless)
+
+freq = [0]*26
+str1 = str1.lower()
+for i in str1:
+    if(i.isalpha()):
+        ch = ord(i)
+        ch -= 97
+        freq[ch] += 1
+
+
+for i in range(len(freq)):
+    if(freq[i] != 0):
+        ch = chr(i+97)
+        print("freq of ",ch," = ",freq[i])
+
+
+
 
