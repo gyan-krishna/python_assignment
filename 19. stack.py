@@ -7,7 +7,7 @@ Created on Thu Jan 28 18:03:32 2021
 Topic: Stack
 """
 
-arr = []
+stack = []
 
 while(True):
     print("options:: ")
@@ -20,15 +20,15 @@ while(True):
 
     if(opt == 1):
         num = int(input("enter element to be pushed :: "))
-        arr.append(num)
+        stack.append(num)
     elif(opt == 2):
-        if(len(arr) == 0):
+        if(len(stack) == 0):
             print("stack underflow!")
         else:
-            ele = arr[len(arr)-1]
-            del arr[len(arr)-1]
+            ele = stack[len(stack)-1]
+            del stack[len(stack)-1]
     elif(opt == 3):
-        print(arr)
+        print(stack)
     elif(opt == 4):
         break
     else:
