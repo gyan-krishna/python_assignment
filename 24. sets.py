@@ -13,7 +13,6 @@ n = int(input("enter the number of elements ::"))
 seta = set()
 setb = set()
 
-print(type(seta))
 for i in range(n):
     seta.add(int(input("enter member of set A ::")))
 
